@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import math
 class Point:
     '''Inicializador o constructor de la clase'''
     def __init__(self, x: float, y: float):
@@ -9,8 +10,16 @@ class Circle:
         self.center: Point = center
         self.radius: float = radius
 
-    def area(self, center: Point, radius: float):
-        area = Circle(center, radius)
+    def area(self, center: Point, radius: float) -> float:
+        area = (self.radius ** 2) * math.pi
+        return area
+    def draw(self):
+        circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
+        plt.gca().add_patch(circle)
+        plt.axis("scaled")
+        plt.show()
+
+
 
 
     def draw(self):
