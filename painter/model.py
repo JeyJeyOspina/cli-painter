@@ -19,17 +19,8 @@ class Circle:
         plt.axis("scaled")
         plt.show()
 
-
-
-
-    def draw(self):
-        circle = plt.Circle((self.center.x, self.center.y), self.radius, color="r")
-        plt.gca().add_patch(circle)
-        plt.axis("scaled")
-        plt.show()
-
-    '''def __str__(self, x: float, y: float, r: float):
-        Circle with center at (x, y) and radius r'''
+    def __str__(self, x: float, y: float, r: float):
+        return "Circle with center at ", self.center.x, self.center.y, "and radius ", self.radius
 
 class Triangle:
     def __init__(self, a: Point, b: Point, c: Point):
