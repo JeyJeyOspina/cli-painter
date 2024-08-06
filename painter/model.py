@@ -49,3 +49,14 @@ class Triangle:
     def __str__(self):
         return (f"Triangle with vertices at ({self.point_1.x}, {self.point_1.y}), ({self.point_2.x},"
                 f" {self.point_2.y}) and ({self.point_3.x}, {self.point_3.y})")
+
+
+class Rectangle:
+    def __init__(self, point_1: Point, point_2: Point):
+        self.point_1: Point = point_1
+        self.point_2: Point = point_2
+
+    def area(self) -> float:
+        area = 0.5 * (self.point_2.x * self.point_2.y - self.point_1.x * self.point_2.y -
+                      self.point_2.x * self.point_1.y + self.point_1.x * self.point_1.y)
+        return area
