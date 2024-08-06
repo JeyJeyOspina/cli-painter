@@ -1,5 +1,6 @@
 import click
 
+
 from painter.model import Circle, Painter, Point, Rectangle, Triangle
 
 
