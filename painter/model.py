@@ -3,7 +3,6 @@ import math
 
 
 class Point:
-    '''Inicializador o constructor de la clase'''
     def __init__(self, x: float, y: float):
         self.x: float = x
         self.y: float = y
@@ -40,3 +39,9 @@ class Triangle:
                       self.point_3.x * self.point_2.y - self.point_1.x * self.point_3.y)
         return area
 
+    def draw(self):
+        x = [self.point_1.x, self.point_2.x, self.point_3.x, self.point_1.x]
+        y = [self.point_1.y, self.point_2.y, self.point_3.y, self.point_1.y]
+        plt.fill(x, y, color='b')
+        plt.axis("scaled")
+        plt.show()
