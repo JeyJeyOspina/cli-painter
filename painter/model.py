@@ -60,3 +60,10 @@ class Rectangle:
         area = 0.5 * (self.point_2.x * self.point_2.y - self.point_1.x * self.point_2.y -
                       self.point_2.x * self.point_1.y + self.point_1.x * self.point_1.y)
         return area
+
+    def draw(self):
+        x = [self.point_1.x, self.point_2.x, self.point_2.x, self.point_1.x, self.point_1.x]
+        y = [self.point_1.y, self.point_1.y, self.point_2.y, self.point_2.y, self.point_1.y]
+        plt.fill(x, y, color='g')
+        plt.axis("scaled")
+        plt.show()
