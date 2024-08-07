@@ -49,7 +49,7 @@ class Triangle:
 
     def __str__(self):
         return (f"Triangle with vertices at ({self.point_1.x}, {self.point_1.y}), ({self.point_2.x},"
-                f" {self.point_2.y}) and ({self.point_3.x}, {self.point_3.y})")
+                f" {self.point_2.y}), and ({self.point_3.x}, {self.point_3.y})")
 
 
 class Rectangle:
