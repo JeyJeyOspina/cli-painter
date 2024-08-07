@@ -58,8 +58,8 @@ class Rectangle:
         self.point_2: Point = point_2
 
     def area(self) -> float:
-        area = 0.5 * (self.point_2.x * self.point_2.y - self.point_1.x * self.point_2.y -
-                      self.point_2.x * self.point_1.y + self.point_1.x * self.point_1.y)
+        area = (self.point_2.x * self.point_2.y - self.point_1.x * self.point_2.y -
+                self.point_2.x * self.point_1.y + self.point_1.x * self.point_1.y)
         return area
 
     def draw(self):
