@@ -25,7 +25,7 @@ class Circle:
         plt.show()
 
     def __str__(self) -> str:
-        return f"Circle with center at  {self.center.x} {self.center.y}, and radius, {self.radius}"
+        return f"Circle with center at ({self.center.x}, {self.center.y}) and radius {self.radius}"
 
 
 class Triangle:
@@ -35,9 +35,9 @@ class Triangle:
         self.point_3: Point = c
 
     def area(self) -> float:
-        area = 0.5 * (self.point_1.x * self.point_2.y + self.point_2.x * self.point_3.y +
-                      self.point_3.x * self.point_1.y - self.point_2.x * self.point_1.y -
-                      self.point_3.x * self.point_2.y - self.point_1.x * self.point_3.y)
+        area = 0.5 * math.fabs((self.point_1.x * self.point_2.y + self.point_2.x * self.point_3.y +
+                                self.point_3.x * self.point_1.y - self.point_2.x * self.point_1.y -
+                                self.point_3.x * self.point_2.y - self.point_1.x * self.point_3.y))
         return area
 
     def draw(self):
@@ -75,7 +75,6 @@ class Rectangle:
 
 
 class Painter:
-
     FILE = ".painter"
 
     def __init__(self) -> None:
